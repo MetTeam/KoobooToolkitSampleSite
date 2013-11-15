@@ -1,4 +1,3 @@
 KoobooToolkitSampleSite
 =======================
-
-this is a sample project which used to demonstrate how to use Kooboo.CMS.Toolkit well.
+This sample demonstrates the use of Kooboo.CMS.Toolkit in Kooboo CMS.

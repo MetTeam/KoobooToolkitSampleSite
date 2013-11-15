@@ -1,0 +1,1 @@
+all files in this folder can be override with a full Kooboo CMS
