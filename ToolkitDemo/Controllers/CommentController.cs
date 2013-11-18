@@ -5,6 +5,7 @@ using System.Text;
 using System.Web.Helpers;
 using System.Web.Mvc;
 using Kooboo.CMS.Common;
+using Kooboo.CMS.Sites.Globalization;
 using Kooboo.CMS.Sites.Membership;
 using Kooboo.CMS.Sites.Models;
 using Kooboo.CMS.Toolkit;
@@ -28,7 +29,7 @@ namespace ToolkitDemo.Controllers
             {
                 ToolkitDemoContext.Current.CommentService.Add(comment);
                 resultData.Model = ControllerContext.RenderView("Article.CommentItem", comment);
-                resultData.AddMessage("Add comment success!");
+                resultData.AddMessage("Add comment success!".RawLabel("AddSuccess", "Comment").ToString());
                 resultData.ReloadPage = false;
             });
             return Json(data);
@@ -45,11 +46,11 @@ namespace ToolkitDemo.Controllers
                 {
                     ToolkitDemoContext.Current.CommentService.Remove(uuid);
                     resultData.Model = uuid;
-                    resultData.AddMessage("Delete success!");
+                    resultData.AddMessage("Delete success!".RawLabel("DeleteSuccess", "Comment").ToString());
                 }
                 else
                 {
-                    resultData.AddErrorMessage("Your handle is forbidden!");
+                    resultData.AddErrorMessage("Your handle is forbidden!".RawLabel("Forbidden", "Comment").ToString());
                 }
             });
             return Json(data);

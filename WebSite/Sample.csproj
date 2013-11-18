@@ -113,7 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cms_Data\Sites\ToolkitDemo\CustomErrors.config" />
-    <Content Include="Cms_Data\Sites\ToolkitDemo\Membership.zip" />
     <Content Include="Cms_Data\Sites\ToolkitDemo\Pages\about\setting.config" />
     <Content Include="Cms_Data\Sites\ToolkitDemo\Pages\Articles\Detail\setting.config" />
     <Content Include="Cms_Data\Sites\ToolkitDemo\Pages\Articles\setting.config" />
@@ -199,6 +198,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cms_Data\Sites\ToolkitDemo\Templates\Views\Contact.EmailTemplate\setting.config" />
+    <Content Include="Cms_Data\Sites\ToolkitDemo\Templates\Views\Contact.EmailTemplate\template.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

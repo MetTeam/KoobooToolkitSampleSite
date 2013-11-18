@@ -49,5 +49,28 @@ namespace ToolkitDemo.Services
                 .DefaultOrder()
                 .MapTo<Comment>();
         }
+
+        public IEnumerable<Article> GetList(string categoryUserKey)
+        {
+            var uuid = string.Empty;
+            if (String.IsNullOrEmpty(categoryUserKey))
+            {
+                var firstCategory = ToolkitDemoContext.Current.CategoryService.GetAll().FirstOrDefault();
+                if (null == firstCategory)
+                {
+                    return Enumerable.Empty<Article>();
+                }
+                uuid = firstCategory.UUID;
+            }
+            else
+            {
+                uuid = ToolkitDemoContext.Current.CategoryService.Get(SystemFieldNames.UserKey, categoryUserKey).UUID;
+            }
+            return this.CreateQuery()
+                .Published()
+                .WhereCategory(FolderNames.Category, uuid)
+                .DefaultOrder()
+                .MapTo<Article>();
+        }
     }
 }
