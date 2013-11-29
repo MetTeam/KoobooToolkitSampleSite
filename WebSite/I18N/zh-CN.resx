@@ -2538,4 +2538,115 @@
   <data name="The content database is not used by any other website any more. &lt;br /&gt;Would you like to delete the associated content database." xml:space="preserve">
     <value>The content database is not used by any other website any more. &lt;br /&gt;Would you like to delete the associated content database.</value>
   </data>
+  <data name="The Tree style data field is required." xml:space="preserve">
+    <value>The Tree style data field is required.</value>
+  </data>
+  <data name="Tree style data" xml:space="preserve">
+    <value>Tree style data</value>
+  </data>
+  <data name="Create the tree style data and management interface." xml:space="preserve">
+    <value>Create the tree style data and management interface.</value>
+  </data>
+  <data name="Control type" xml:space="preserve">
+    <value>Control type</value>
+  </data>
+  <data name="This name is being used by other columns." xml:space="preserve">
+    <value>This name is being used by other columns.</value>
+  </data>
+  <data name="Invalid column name." xml:space="preserve">
+    <value>Invalid column name.</value>
+  </data>
+  <data name="Name of your field, it uses the same naming rule as C# veriable name." xml:space="preserve">
+    <value>Name of your field, it uses the same naming rule as C# veriable name.</value>
+  </data>
+  <data name="Descriptive label of your field on the content editing page." xml:space="preserve">
+    <value>Descriptive label of your field on the content editing page.</value>
+  </data>
+  <data name="The way that you would like to input your content." xml:space="preserve">
+    <value>The way that you would like to input your content.</value>
+  </data>
+  <data name="Data type" xml:space="preserve">
+    <value>Data type</value>
+  </data>
+  <data name="The Summary field will be used as a title or summary to describe your content item." xml:space="preserve">
+    <value>The Summary field will be used as a title or summary to describe your content item.</value>
+  </data>
+  <data name="Show this field in the CMS content list page." xml:space="preserve">
+    <value>Show this field in the CMS content list page.</value>
+  </data>
+  <data name="Input tip while users are editing content." xml:space="preserve">
+    <value>Input tip while users are editing content.</value>
+  </data>
+  <data name="Allow null" xml:space="preserve">
+    <value>Allow null</value>
+  </data>
+  <data name="Custom settings" xml:space="preserve">
+    <value>Custom settings</value>
+  </data>
+  <data name="The field Length must be a number." xml:space="preserve">
+    <value>The field Length must be a number.</value>
+  </data>
+  <data name="Add content" xml:space="preserve">
+    <value>Add content</value>
+  </data>
+  <data name="Re-broadcast" xml:space="preserve">
+    <value>Re-broadcast</value>
+  </data>
+  <data name="Edit a content" xml:space="preserve">
+    <value>Edit a content</value>
+  </data>
+  <data name="Upload a new image" xml:space="preserve">
+    <value>Upload a new image</value>
+  </data>
+  <data name="Only .png and .jpg file are allowed." xml:space="preserve">
+    <value>Only .png and .jpg file are allowed.</value>
+  </data>
+  <data name="X" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="Y" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="Aspect ratio" xml:space="preserve">
+    <value>Aspect ratio</value>
+  </data>
+  <data name="Crope" xml:space="preserve">
+    <value>Crope</value>
+  </data>
+  <data name="Media content" xml:space="preserve">
+    <value>Media content</value>
+  </data>
+  <data name="Details view" xml:space="preserve">
+    <value>Details view</value>
+  </data>
+  <data name="Thumbnails view" xml:space="preserve">
+    <value>Thumbnails view</value>
+  </data>
+  <data name="This folder is empty." xml:space="preserve">
+    <value>This folder is empty.</value>
+  </data>
+  <data name="Invalid folder name." xml:space="preserve">
+    <value>Invalid folder name.</value>
+  </data>
+  <data name="Root" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="1. Database" xml:space="preserve">
+    <value>1. Database</value>
+  </data>
+  <data name="Create a database to store your content" xml:space="preserve">
+    <value>Create a database to store your content</value>
+  </data>
+  <data name="2. Setting" xml:space="preserve">
+    <value>2. Setting</value>
+  </data>
+  <data name="3. Content " xml:space="preserve">
+    <value>3. Content </value>
+  </data>
+  <data name="Create a database" xml:space="preserve">
+    <value>Create a database</value>
+  </data>
 </root>
