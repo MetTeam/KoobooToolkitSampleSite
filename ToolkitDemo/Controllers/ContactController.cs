@@ -28,7 +28,7 @@ namespace ToolkitDemo.Controllers
                 var smtp = Site.Current.Smtp;
                 if (null != smtp && !String.IsNullOrEmpty(smtp.From) && null != smtp.To && smtp.To.Any())
                 {
-                    foreach (var mail in smtp.To.Select(to => new MailMessage(smtp.From, to, contact.Subject, body)))
+                    foreach (var mail in smtp.To.Select(to => new MailMessage(smtp.From, to, contact.Subject + "(From:{0})".RawLabel("SendEmailFrom").ToString().FormatWith(contact.From), body)))
                     {
                         EmailUtility.Send(mail);
                     }

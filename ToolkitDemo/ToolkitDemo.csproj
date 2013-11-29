@@ -53,6 +53,7 @@
       <HintPath>..\lib\Kooboo.CMS.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -67,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigurationKeys.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="FolderNames.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Services\ArticleService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\CommentService.cs" />
+    <Compile Include="Services\SampleJobService.cs" />
     <Compile Include="ToolkitDemoArea.cs" />
     <Compile Include="ToolkitDemoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
