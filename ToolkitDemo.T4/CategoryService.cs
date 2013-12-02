@@ -11,13 +11,13 @@ using ToolkitDemo.Models;
 
 namespace ToolkitDemo.Services
 {
-	public class CategoryService : ServiceBase<Category>
+	public class CategoryService : ServiceBase<ToolkitDemo.Models.Category>
     {
-        public override Category Get(TextContent textContent)
+        public override ToolkitDemo.Models.Category Get(TextContent textContent)
         {
             if(textContent != null)
             {
-                return new Category(textContent);
+                return new ToolkitDemo.Models.Category(textContent);
             }
             return null;
         }
