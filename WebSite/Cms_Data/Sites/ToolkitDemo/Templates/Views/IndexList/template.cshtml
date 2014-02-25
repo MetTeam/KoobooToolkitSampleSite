@@ -1,0 +1,23 @@
+﻿@{
+    var categories = ContentHelper.TextFolder("Category").CreateQuery();
+    }
+<h2>To Do:Query Categories and top 10 articles which belongs to it</h2>
+<hr />
+<ul>
+    @foreach (var item in categories)
+    {
+        var dummy = categories.WhereIn("UUID", item.UUID);
+        var top10 = ContentHelper.TextFolder("Article").CreateQuery().WhereCategory(dummy).Take(10);
+        <li>
+            <h3>@item["Title"]</h3>
+            <ul>
+                @foreach (var child in top10)
+                {
+                    <li>
+                        @Html.FrontHtml().PageLink(child["Title"], "Articles~Detail", new { UserKey = child.UserKey })
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>

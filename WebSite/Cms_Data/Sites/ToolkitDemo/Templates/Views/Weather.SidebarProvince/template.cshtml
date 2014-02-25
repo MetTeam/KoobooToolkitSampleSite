@@ -1,0 +1,22 @@
+﻿@{
+    var list = ViewBag.province;
+}
+<div class="block menu">
+    <ul class="clearfix">
+        @if (null != list)
+        {
+            foreach (var item in list.city)
+            {
+                <li>
+                    @Html.FrontHtml().PageLink(item.quName, "Weather~Province", new { UserKey = item.pyName })
+                </li>
+            }
+        }
+    </ul>
+</div>
+<style type="text/css">
+    #sidebar .block.menu ul li {
+        float: left;
+        display: inline-block;
+    }
+</style>

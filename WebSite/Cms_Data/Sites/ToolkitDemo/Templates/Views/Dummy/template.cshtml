@@ -1,0 +1,10 @@
+﻿@{
+    var list = ToolkitDemo.ToolkitDemoContext.Current.TestTreeService.GetAll().ToList();
+}
+
+<ul>
+    @foreach (var item in list)
+    {
+        <li>@item.Title</li>
+    }
+</ul>
