@@ -12,5 +12,7 @@ namespace ToolkitDemo
         public const string Category = "Category";
 
         public const string Comment = "Comment";
+
+        public const string TestTree = "TestTree";
     }
 }

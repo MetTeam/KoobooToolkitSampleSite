@@ -26,6 +26,7 @@ namespace ToolkitDemo.Models
 			public const string Summary = "Summary";
 			public const string Description = "Description";
 			public const string Readings = "Readings";
+			public const string ParentUUID = "ParentUUID";
 		}
 			
 		public string Title
@@ -73,6 +74,18 @@ namespace ToolkitDemo.Models
 			set
 			{
 				this[FieldNames.Readings] = value;
+			}
+		}
+			
+		public string ParentUUID
+		{
+			get
+			{
+				return this.GetString(FieldNames.ParentUUID);
+			}
+			set
+			{
+				this[FieldNames.ParentUUID] = value;
 			}
 		}
 	}

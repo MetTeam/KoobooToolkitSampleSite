@@ -32,5 +32,13 @@ namespace ToolkitDemo
         {
             get { return GetService<CommentService>(); }
         }
+
+        public TestTreeService TestTreeService
+        {
+            get
+            {
+                return GetService<TestTreeService>();
+            }
+        }
     }
 }

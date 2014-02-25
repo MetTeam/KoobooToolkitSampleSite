@@ -50,6 +50,15 @@
             @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["Readings"], null)
             
             </td>          
+            </tr><tr>
+            <th>
+            <label for="ParentUUID">ParentUUID</label>
+            </th>
+            <td>
+            <input class='long' id="ParentUUID" name="ParentUUID" type="text" value="@(Model.ParentUUID ?? "")" />            
+            @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["ParentUUID"], null)
+            
+            </td>          
             </tr>
             @if (allowedEdit) {
                 <tr>

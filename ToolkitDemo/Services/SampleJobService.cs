@@ -18,10 +18,6 @@ namespace ToolkitDemo.Services
     [Dependency(typeof(IJob), Order = 100)]
     public class SampleJobService : IJob
     {
-        public SampleJobService()
-        {
-        }
-
         public void Error(Exception e)
         {
             Log.LogException(e);
@@ -45,12 +41,9 @@ namespace ToolkitDemo.Services
         public void Init(HttpApplication context)
         {
             var intervalConfig = System.Configuration.ConfigurationManager.AppSettings[ConfigurationKeys.SampleJobInterval] ?? "0";
-            var enabledConfig = System.Configuration.ConfigurationManager.AppSettings[ConfigurationKeys.SampleJobEnabled] ?? "false";
             var interval = 0;
-            bool enabled = false;
             int.TryParse(intervalConfig, out interval);
-            bool.TryParse(enabledConfig, out enabled);
-            if (enabled && interval > 0)
+            if (interval > 0)
             {
                 Jobs.Instance.AttachJob("SampleJobModule", new SampleJobService(), interval, running);
             }

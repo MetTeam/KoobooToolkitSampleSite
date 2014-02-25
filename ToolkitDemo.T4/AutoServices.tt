@@ -13,7 +13,7 @@
 	string modelsNamespace = "ToolkitDemo.Models";
 	string servicesNamespace = "ToolkitDemo.Services";
 	var currentRepositoryName = "ToolkitDemo";
-	var rootFolder = System.Environment.CurrentDirectory;	
+	string rootFolder = Host.ResolveAssemblyReference("$(SolutionDir)");
     var schemasFolderPath =Path.Combine(rootFolder,"WebSite",string.Format(@"Cms_Data\Contents\{0}\Schemas\", currentRepositoryName));
 	if (!Directory.Exists(schemasFolderPath)) { 
 		throw new Exception(String.Format("\"{0}\" not found", schemasFolderPath));
