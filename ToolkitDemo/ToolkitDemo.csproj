@@ -130,6 +130,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\TestTree.cs" />
+    <Compile Include="Plugins\IntegrationPlugin.cs" />
     <Compile Include="Services\ArticleService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\CommentService.cs" />
