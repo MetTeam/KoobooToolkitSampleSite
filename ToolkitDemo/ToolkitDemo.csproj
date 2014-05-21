@@ -133,6 +133,7 @@
     <Compile Include="Services\ArticleService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\CommentService.cs" />
+    <Compile Include="Services\NewsService.cs" />
     <Compile Include="Services\SampleJobService.cs" />
     <Compile Include="Services\TestTreeService.cs" />
     <Compile Include="ToolkitDemoArea.cs" />

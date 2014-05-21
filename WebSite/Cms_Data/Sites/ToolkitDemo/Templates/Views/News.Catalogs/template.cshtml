@@ -1,0 +1,13 @@
+﻿@{
+    var catalogs = ToolkitDemo.ToolkitDemoContext.Current.NewsService.GetCategories();
+}
+<div class="block menu">
+    <ul>
+        @foreach (var item in catalogs)
+        {
+            <li>
+                @Html.FrontHtml().PageLink(item.Name, "News", new { UserKey = item.Name })
+            </li>
+        }
+    </ul>
+</div>

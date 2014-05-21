@@ -40,5 +40,13 @@ namespace ToolkitDemo
                 return GetService<TestTreeService>();
             }
         }
+
+        public NewsService NewsService
+        {
+            get
+            {
+                return GetService<NewsService>();
+            }
+        }
     }
 }

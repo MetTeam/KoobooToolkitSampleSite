@@ -1,0 +1,30 @@
+﻿@using ToolkitDemo
+@using ToolkitDemo.Models
+@{
+    var category = Page_Context.Current.PageRequestContext.AllQueryString["UserKey"];
+    var pageIndex = Page_Context.Current.PageRequestContext.AllQueryString["page"].AsInt(0);
+    const int pageSize = 2;
+    var pageOption = new PagerOptions
+    {
+        NextPageText = "Next »",
+        PrevPageText = "« Previous",
+        CssClass = "pagination",
+        CurrentPagerItemWrapperFormatString = "<span class=\"current\">{0}</span>",
+        NavigationPagerItemWrapperFormatString = "<span class=\"pagenavigation\">{0}</span>"
+    };
+    var list = ToolkitDemo.ToolkitDemoContext.Current.NewsService.GetTop().ToPagedList(pageIndex, pageSize);
+}
+
+<div class="block list">
+    @foreach (var item in list)
+    {
+        <div class="item" @ViewHelper.EditItemAttributes(item)>
+            <h6 class="title"><a href='@Url.FrontUrl().PageUrl("Articles/Detail", new { UserKey = item.UserKey})' @ViewHelper.Edit(item, "Title")>@item.Title</a></h6>
+            <span class="date">@ViewHelper.DateTimeToString(item.UtcCreationDate, "yyyy-MM-dd")</span>
+            <p @ViewHelper.Edit(item, "Summary")>@Html.Raw(item.Summary)</p>
+            <a class="comment" href="@Url.FrontUrl().PageUrl("Articles/Detail", new { UserKey = item.UserKey})#comments">@(ToolkitDemoContext.Current.ArticleService.GetComments(item).Count()) Comments</a>
+        </div>
+    }
+</div>
+
+@Html.FrontHtml().Pager(list, pageOption)

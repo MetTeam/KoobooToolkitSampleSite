@@ -154,4 +154,7 @@
   <data name="Province" xml:space="preserve">
     <value>Province</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
 </root>
