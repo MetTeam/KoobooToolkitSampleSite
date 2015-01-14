@@ -1,0 +1,43 @@
+﻿@{
+    const string testUrl1 = "/en/Odds/PreGame/Hockey/CCC/NHL"; //with sitePath,start with '/'
+    const string testUrl2 = "/Odds/PreGame/Hockey/CCC/NHL"; //without sitePath,start with '/'
+    const string testUrl3 = "en/Odds/PreGame/Hockey/CCC/NHL"; //with sitePath
+    const string testUrl4 = "Odds/PreGame/Hockey/CCC/NHL"; //without sitePath
+}
+<ul>
+    <li>
+        @getPage(testUrl1).FullName
+    </li>
+    <li>
+        @getPage(testUrl2).FullName
+    </li>
+    <li>
+        @getPage(testUrl3).FullName
+    </li>
+    <li>
+        @getPage(testUrl4).FullName
+    </li>
+</ul>
+
+@functions
+{
+    private Kooboo.CMS.Sites.Models.Page getPage(string url)
+    {
+        string pureUrl = url.Trim('/');
+
+        string pageUrl = pureUrl;
+        var sitePath = pureUrl.Substring(0, pureUrl.IndexOf('/'));
+        Site currentSite = Site.Current;
+        var allSite = Kooboo.CMS.Sites.Services.ServiceFactory.SiteManager.All().Select(it => it.AsActual());
+        var site = allSite.FirstOrDefault(
+            it => !String.IsNullOrEmpty(it.SitePath)
+            && it.SitePath.Equals(sitePath)
+            && it.Domains.Any(d => d.Equals(HttpContext.Current.Request.Url.Host)));
+        if (site != null)
+        {
+            currentSite = site;
+            pageUrl = pageUrl.Substring(pageUrl.IndexOf('/'));
+        }
+        return Kooboo.CMS.Sites.Services.ServiceFactory.PageManager.GetPageByUrl(currentSite, pageUrl);
+    }
+}
